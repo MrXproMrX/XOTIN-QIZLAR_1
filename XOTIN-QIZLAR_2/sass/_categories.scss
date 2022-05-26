@@ -1,0 +1,28 @@
+// categories start
+
+.categories{
+    position: relative;
+    margin-bottom: 100px;
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:top right;
+}
+
+// categories end
+
+
+@media (max-width:1150px){
+    .categories {
+        margin-bottom: 50px;
+    }
+}
+
+
+@media (max-width:600px){
+    .categories {
+        margin-bottom: 30px;
+        background-image:none !important;
+    }
+}

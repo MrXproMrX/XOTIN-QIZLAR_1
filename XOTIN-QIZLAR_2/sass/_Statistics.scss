@@ -1,0 +1,110 @@
+// Statistics start
+
+.statistics{
+    position: relative;
+    margin-bottom: 100px;
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:top center;
+
+    &__item{
+        width: 420px;
+        height: auto;
+        border-left: 2px solid $red;
+        background: #FFFFFF;
+        box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.1), inset 8px 0px 0px #FF4361;
+        border-radius: 6px;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        -ms-border-radius: 6px;
+        -o-border-radius: 6px;
+        flex: 0 0 31%;
+        position: relative;
+        @extend%transition;
+
+        a{
+            display: inline-block;
+            width: 100%;
+            @extend%transition;
+            height: 100%;
+            padding: 25px 30px;
+        }
+
+        &:hover{
+            background-color:$red;
+        }
+    }
+
+     &__title__h4{
+        @include fontAll(22px,600,$link);
+        line-height: 100%;
+        @extend%transition;
+    }
+
+    &__pro{
+        display: flex;
+        align-items:center;
+        grid-gap: 30px;
+        flex-wrap: wrap;
+    }
+}
+
+.statistics__item:hover > a .statistics__title__h4{
+    color:#FFFFFF;
+}
+
+// Statistics end
+
+
+@media (max-width:1150px){
+    .statistics{
+        margin-bottom: 50px;
+    }
+
+    .statistics__item{
+        flex: 0 0 47%;
+    }
+
+    .statistics__item a{
+        padding: 20px 30px;
+    }
+}
+
+
+@media (max-width:750px){
+    .statistics{
+        margin-bottom: 50px;
+    }
+
+    .statistics__item{
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+    .statistics__item a{
+        padding: 20px 30px;
+    }
+}
+
+@media (max-width:600px){
+    .statistics{
+        margin-bottom: 30px;
+        background-image:none !important;
+    }
+
+    .statistics__item{
+       border-left:1px solid $red;
+    }
+
+    .statistics__title__h4 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width:400px){
+    .statistics__title__h4 {
+        font-size: 18px;
+    }
+}

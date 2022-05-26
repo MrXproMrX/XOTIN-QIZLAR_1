@@ -1,0 +1,30 @@
+// statistics inside start
+
+.statistics_inside{
+    position: relative;
+    margin-bottom: 100px;
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:top center;
+}
+
+// statistics inside end
+
+
+@media (max-width:1300px){
+    .statistics_inside{
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width:600px){
+    .statistics_inside{
+        margin-bottom: 30px;
+    }
+
+    .statistics_inside{
+        background-image:none !important;
+    }
+}
