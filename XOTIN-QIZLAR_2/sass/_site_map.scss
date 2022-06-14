@@ -1,0 +1,58 @@
+// site_map start
+
+.site_map{
+    position: relative;
+    margin-bottom: 70px;
+
+    &__list{
+        margin-top: 30px;
+        list-style-type: unset;
+        list-style: unset;
+        margin-left: 15px;
+        li{
+            .site_map__link{
+                @include fontAll(16px,500,$link);
+                line-height: 100%;
+                text-transform: uppercase;
+            }
+        }
+        li+li{
+            margin-top: 15px;
+        }
+        li{
+            ul{
+                margin-left: 30px;
+                margin-top: 10px;
+                list-style: circle;
+                list-style-type: circle;
+                li+li{
+                    margin-top: 5px;
+                }
+                li{
+                    .site_map__link{
+                        @include fontAll(16px,400,$link);
+                        line-height: 100%;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// site_map end
+
+
+@media (max-width:800px){
+    .site_map {
+        margin-bottom: 30px;
+    }
+
+    .site_map__list li .site_map__link {
+        font-size: 14px;
+    }
+
+    .site_map__list li ul li .site_map__link {
+        font-size: 14px;
+    }
+}
