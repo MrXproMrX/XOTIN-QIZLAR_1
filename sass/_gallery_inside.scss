@@ -1,0 +1,156 @@
+// gallery_inside start
+
+
+.gallery_inside{
+    position: relative;
+    margin-bottom: 100px;
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:top right;
+
+    &__top{
+        #mainCarousel {
+            width: 100%;
+            margin: 0 auto 1rem auto;
+            
+            --carousel-button-color: #fff;
+            --carousel-button-bg: rgba(44, 42, 43, 0.3);
+            --carousel-button-svg-width: 20px;
+            --carousel-button-svg-height: 20px;
+            @extend%transition;
+            --carousel-button-svg-stroke-width: 2.5;
+            
+            img{
+                width: 100%;
+                height: 600px;
+                object-fit: cover;
+            }
+            
+        }
+
+        #mainCarousel .carousel__slide {
+            width: 100%;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #mainCarousel .carousel__button.is-prev {
+            border-radius: 0px  6px 6px 0px;
+            left: 0;
+            -webkit-border-radius: 0px  6px 6px 0px;
+            -moz-border-radius: 0px  6px 6px 0px;
+            -ms-border-radius: 0px  6px 6px 0px;
+            -o-border-radius: 0px  6px 6px 0px;
+            @extend%transition;
+            height: 80px;
+            width: 50px;
+        }
+
+        #mainCarousel .carousel__button.is-next {
+            right: 0;
+            border-radius: 6px 0px 0px 6px;
+            -webkit-border-radius: 6px 0px 0px 6px;
+            -moz-border-radius: 6px 0px 0px 6px;
+            -ms-border-radius: 6px 0px 0px 6px;
+            -o-border-radius: 6px 0px 0px 6px;
+            @extend%transition;
+            height: 80px;
+            width: 50px;
+        }
+
+        #mainCarousel .carousel__button:hover {
+            outline: none;
+            background-color:$blue;
+        }
+
+        #thumbCarousel .carousel__slide {
+            @include fiximg(170px,120px,true);
+            padding: 0;
+            margin: 0.25rem;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #thumbCarousel .carousel__slide img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        #thumbCarousel .carousel__slide.is-nav-selected {
+            &::after{
+                top: 0;
+                left: 0;
+                content:'';
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(0deg, rgba(0, 112, 152, 0.5), rgba(0, 112, 152, 0.5));
+                border-radius: 6px;
+                -webkit-border-radius: 6px;
+                -moz-border-radius: 6px;
+                -ms-border-radius: 6px;
+                -o-border-radius: 6px;
+                position: absolute;
+            }
+        }
+    }
+}
+
+
+// gallery_inside end
+
+
+
+@media (max-width:1300px){
+    .gallery_inside{
+        margin-bottom: 50px;
+    }
+
+    .gallery_inside__top #mainCarousel img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+@media (max-width:650px){
+    .gallery_inside__top #thumbCarousel .carousel__slide {
+        width: 150px;
+        height: 100px;
+    }
+}
+
+
+@media (max-width:600px){
+    .gallery_inside__top #thumbCarousel .carousel__slide {
+        width: 120px;
+        height: 80px;
+    }
+
+    .gallery_inside{
+        margin-bottom: 30px;
+    }
+
+
+    .gallery_inside__top #mainCarousel .carousel__button.is-next,
+    .gallery_inside__top #mainCarousel .carousel__button.is-prev{
+        width: 40px;
+        height: 50px;
+    }
+
+    .gallery_inside{
+         background-image:none !important;
+    }
+}
+
+
+@media (max-width:400px){
+    .gallery_inside__top #thumbCarousel .carousel__slide {
+        width: 80px;
+        height: 60px;
+    }
+}
